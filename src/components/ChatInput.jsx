@@ -37,7 +37,7 @@ const Chatinput = ({
           <button
             className={`p-3 rounded-full transition-colors shadow-md cursor-pointer`}
             onClick={handleSendMessage}
-            disabled={loading || input.trim()}
+            disabled={loading || !input.trim()}
           >
             <Send className={`${darkMode ? "text-white" : "text-gray-900"}`} />
           </button>

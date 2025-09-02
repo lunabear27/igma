@@ -5,6 +5,7 @@ import { formatTime } from "../utils/chatUtils";
 import LoaderChat from "./components/LoaderChat";
 import Chatinput from "./components/Chatinput";
 import { generateContent } from "./Services/geminiAPI";
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [darkMode, setDarkMode] = useState(false);

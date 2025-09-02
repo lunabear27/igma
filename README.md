@@ -109,3 +109,71 @@ igma-chatbot
 └─ vite.config.js
 
 ```
+```
+igma-chatbot
+├─ .env
+├─ .qodo
+├─ docs
+│  ├─ ACCREDITATION STATUS.docx
+│  ├─ ADMISSIONS.docx
+│  ├─ Board of Trustees.docx
+│  ├─ Brief history of the University of the East.docx
+│  ├─ College of Arts and Science Course Information.docx
+│  ├─ College of Business Administration Course Information.docx
+│  ├─ College of Engineering Course Information.docx
+│  ├─ college school calendar.docx
+│  ├─ DEPARTMENT AND FACULTY.docx
+│  ├─ Department Heads.docx
+│  ├─ DRRM 1&2 record.docx
+│  ├─ email directory.docx
+│  ├─ FREE ONLINE DATABASES.docx
+│  ├─ Functions of the Office of Curriculum Development and Instruction.docx
+│  ├─ k10 school calendar.docx
+│  ├─ Library record.docx
+│  ├─ Notable alumni of University of the East.docx
+│  ├─ Office for International Affairs and External Linkages.docx
+│  ├─ Offices.docx
+│  ├─ online enrollment.docx
+│  ├─ SAO record.docx
+│  ├─ SCHOLARSHIP AND SPECIAL DISCOUNTS.docx
+│  ├─ school fees for filipino students.docx
+│  ├─ SCHOOL FEES FOR INTERNATIONAL STUDENTS.docx
+│  ├─ shs school calendar.docx
+│  ├─ The Guidance, Counseling and Career Services Office.docx
+│  ├─ trunklines.docx
+│  ├─ UE Department of Registration and Records Management.docx
+│  ├─ UE FORMS LINK.docx
+│  ├─ UE HYMN.docx
+│  ├─ UE PORTAL.docx
+│  ├─ UE Student Council.docx
+│  ├─ UE STUDENT PORTAL RELATED.docx
+│  └─ University Relation Office.docx
+├─ eslint.config.js
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ public
+│  └─ vite.svg
+├─ README.md
+├─ scripts
+│  └─ process-docs.js
+├─ src
+│  ├─ App.css
+│  ├─ App.jsx
+│  ├─ assets
+│  │  ├─ igmalogo.png
+│  │  └─ react.svg
+│  ├─ components
+│  │  ├─ ChatInput.jsx
+│  │  ├─ ChatMessage.jsx
+│  │  ├─ Header.jsx
+│  │  └─ LoaderChat.jsx
+│  ├─ main.jsx
+│  └─ Services
+│     └─ geminiAPI.js
+├─ university-data.json
+├─ utils
+│  └─ chatUtils.js
+└─ vite.config.js
+
+```

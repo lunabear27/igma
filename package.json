@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/genai": "^1.16.0",
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.56.1",
     "@tailwindcss/vite": "^4.1.12",
+    "dotenv": "^17.2.1",
     "lucide-react": "^0.542.0",
     "mammoth": "^1.10.0",
     "react": "^19.1.1",
