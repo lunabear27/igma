@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Header from "./components/header";
 import ChatMessage from "./components/ChatMessage";
 import { formatTime } from "../utils/chatUtils";
 import LoaderChat from "./components/LoaderChat";
-import Chatinput from "./components/Chatinput";
+import ChatInput from "./components/ChatInput";
+import SplashScreen from "./components/SplashScreen";
 import { generateContent } from "./Services/geminiAPI";
 
 const App = () => {
+  const [showSplash, setShowSplash] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [input, setInput] = useState("");
@@ -18,10 +20,27 @@ const App = () => {
       timestamp: new Date(),
     },
   ]);
+
+  // Ref for auto-scrolling
+  const messagesEndRef = useRef(null);
+  // Auto-scroll to bottom when messages change
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, isLoading]);
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
+  // Splash Screen
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
+  // Show splash screen first
+  if (showSplash) {
+    return <SplashScreen onComplete={handleSplashComplete} />;
+  }
+
+  
   const handleSendMessage = async () => {
     if (!input.trim()) return;
 
@@ -87,9 +106,11 @@ const App = () => {
             );
           })}
           {isLoading && <LoaderChat />}
+          {/* Invisible div for auto-scrolling */}
+          <div ref={messagesEndRef} />
         </div>
       </div>
-      <Chatinput
+      <ChatInput
         darkMode={darkMode}
         input={input}
         setInput={setInput}

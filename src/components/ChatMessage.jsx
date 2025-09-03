@@ -1,5 +1,4 @@
 import { User } from "lucide-react";
-import React from "react";
 import logo from "../assets/igmalogo.png";
 const ChatMessage = ({ darkMode, messages, formatTime }) => {
   return (

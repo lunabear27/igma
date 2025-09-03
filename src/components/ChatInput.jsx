@@ -22,20 +22,27 @@ const Chatinput = ({
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {
-              if (e.key === "Enter" && !e.shiftKey) {
+              if (e.key === "Enter" && !e.shiftKey && !loading) {
                 e.preventDefault();
                 handleSendMessage();
               }
             }}
+            disabled={loading}
             placeholder="type your message"
             className={`flex-1 border ${
               darkMode
                 ? "bg-gray-700 border-gray-700 text-white placeholder-gray-400"
                 : "bg-white border-gray-300 text-gray-900"
+            } ${
+              loading ? "opacity-50 cursor-not-allowed" : ""
             } rounded-full px-5 py-3 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent`}
           />
           <button
-            className={`p-3 rounded-full transition-colors shadow-md cursor-pointer`}
+            className={`p-3 rounded-full transition-colors shadow-md ${
+              loading || !input.trim() 
+                ? "opacity-50 cursor-not-allowed" 
+                : "cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600"
+            }`}
             onClick={handleSendMessage}
             disabled={loading || !input.trim()}
           >
